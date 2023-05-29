@@ -13,6 +13,7 @@
 		CFBEECC82A1CEF060095B2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECC62A1CEF060095B2A1 /* Main.storyboard */; };
 		CFBEECCA2A1CEF080095B2A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECC92A1CEF080095B2A1 /* Assets.xcassets */; };
 		CFBEECCD2A1CEF080095B2A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECCB2A1CEF080095B2A1 /* LaunchScreen.storyboard */; };
+		CFE880412A21067B00E9E41C /* NasaPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE880402A21067B00E9E41C /* NasaPicture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CFBEECC92A1CEF080095B2A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFBEECCC2A1CEF080095B2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFBEECCE2A1CEF080095B2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFE880402A21067B00E9E41C /* NasaPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPicture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		CFBEECBF2A1CEF060095B2A1 /* iOS_APOD */ = {
 			isa = PBXGroup;
 			children = (
+				CFE8803F2A21063D00E9E41C /* Models */,
 				CFBEECD52A1CEF8A0095B2A1 /* Helpers */,
 				CFBEECD42A1CEF6A0095B2A1 /* ViewControllers */,
 				CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */,
@@ -81,6 +84,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CFE8803F2A21063D00E9E41C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFE880402A21067B00E9E41C /* NasaPicture.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 				CFBEECC52A1CEF060095B2A1 /* ViewController.swift in Sources */,
 				CFBEECC12A1CEF060095B2A1 /* AppDelegate.swift in Sources */,
 				CFBEECC32A1CEF060095B2A1 /* SceneDelegate.swift in Sources */,
+				CFE880412A21067B00E9E41C /* NasaPicture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
