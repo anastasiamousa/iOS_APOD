@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct NasaPicture: Decodable {
+    let date: String
+    let title: String
+    let explanation: String
+    let url: String
+}
