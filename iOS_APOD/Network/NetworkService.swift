@@ -13,12 +13,13 @@ class NetworkService {
     //MARK: - Properties
     
     typealias ApiClosurePicture = (Result<NasaPicture,Error>) -> ()
-    typealias ApiClosurePictureDate = (Result<[NasaPicture],Error>) -> ()
-    
+    typealias ApiClosurePictures = (Result<[NasaPicture],Error>) -> ()
+
     private let apiKey = "pVicagi3oylyrOLjwuk5gBOJi6jb6Tfn9AljM6oP"
     private var apiURL: URL? {
         URL(string: "https://api.nasa.gov/planetary/apod")
     }
+
     private var defaultParameters: [String: Any] {
         ["api_key": apiKey]
     }
@@ -26,8 +27,11 @@ class NetworkService {
     //MARK: - Methods
     
     func fetchTodaysImage(completion: ApiClosurePicture?) {
-        guard let apiURL = apiURL else { return }
-        AF.request(apiURL, method: .get, parameters: nil)
+        guard let apiURL = apiURL else {
+            return
+        }
+
+        AF.request(apiURL, method: .get, parameters: defaultParameters)
             .validate()
             .responseDecodable(of: NasaPicture.self, queue: .main) { response in
             switch response.result {
@@ -38,20 +42,18 @@ class NetworkService {
             }
         }
     }
-    
-    func fetchImages(from: Date? =  nil, to: Date? = nil, completion: ApiClosurePictureDate?) {
+
+    func fetchImages(from: Date? = nil, to: Date? = nil, completion: ApiClosurePictures?) {
         guard let apiURL = apiURL else { return }
 
         var parameters = defaultParameters
-        
         if let fromDate = from {
             parameters["end_date"] = fromDate.toYYYYMMDD
         }
-        
         if let toDate = to {
             parameters["start_date"] = toDate.toYYYYMMDD
         }
-        
+
         AF.request(apiURL, method: .get, parameters: nil)
             .validate()
             .responseDecodable(of: [NasaPicture].self, queue: .main) { response in
@@ -63,5 +65,5 @@ class NetworkService {
             }
         }
     }
-    
+
 }

@@ -16,6 +16,7 @@
 		CFBEECC82A1CEF060095B2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECC62A1CEF060095B2A1 /* Main.storyboard */; };
 		CFBEECCA2A1CEF080095B2A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECC92A1CEF080095B2A1 /* Assets.xcassets */; };
 		CFBEECCD2A1CEF080095B2A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECCB2A1CEF080095B2A1 /* LaunchScreen.storyboard */; };
+		CFD32E932A2E144E008615BC /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD32E922A2E144E008615BC /* ColorAssets.xcassets */; };
 		CFE880412A21067B00E9E41C /* NasaPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE880402A21067B00E9E41C /* NasaPicture.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		CFBEECC92A1CEF080095B2A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFBEECCC2A1CEF080095B2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFBEECCE2A1CEF080095B2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD32E922A2E144E008615BC /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		CFE880402A21067B00E9E41C /* NasaPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPicture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 		CFBEECBF2A1CEF060095B2A1 /* iOS_APOD */ = {
 			isa = PBXGroup;
 			children = (
+				CFD32E912A2E141D008615BC /* Resources */,
 				CF9675B92A2A021A004A65AF /* Extensions */,
 				CFE8803F2A21063D00E9E41C /* Models */,
 				CFBEECD52A1CEF8A0095B2A1 /* Network */,
@@ -103,7 +106,6 @@
 				CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */,
 				CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */,
 				CFBEECC62A1CEF060095B2A1 /* Main.storyboard */,
-				CFBEECC92A1CEF080095B2A1 /* Assets.xcassets */,
 				CFBEECCB2A1CEF080095B2A1 /* LaunchScreen.storyboard */,
 				CFBEECCE2A1CEF080095B2A1 /* Info.plist */,
 			);
@@ -124,6 +126,15 @@
 				CF9675B22A29E8D1004A65AF /* NetworkService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		CFD32E912A2E141D008615BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFBEECC92A1CEF080095B2A1 /* Assets.xcassets */,
+				CFD32E922A2E144E008615BC /* ColorAssets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CFE8803F2A21063D00E9E41C /* Models */ = {
@@ -196,6 +207,7 @@
 			files = (
 				CFBEECCD2A1CEF080095B2A1 /* LaunchScreen.storyboard in Resources */,
 				CFBEECCA2A1CEF080095B2A1 /* Assets.xcassets in Resources */,
+				CFD32E932A2E144E008615BC /* ColorAssets.xcassets in Resources */,
 				CFBEECC82A1CEF060095B2A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
