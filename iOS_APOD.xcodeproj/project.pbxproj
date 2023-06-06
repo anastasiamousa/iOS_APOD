@@ -60,6 +60,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CF5022932A2F6E4A0085D2AF /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				CF5022952A2F6EAB0085D2AF /* View */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		CF5022942A2F6E790085D2AF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CFE8803F2A21063D00E9E41C /* Models */,
+				CF9675B92A2A021A004A65AF /* Extensions */,
+				CFBEECD52A1CEF8A0095B2A1 /* Network */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CF5022952A2F6EAB0085D2AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFBEECCB2A1CEF080095B2A1 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CF9675B42A29EB7B004A65AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				CFBEECBF2A1CEF060095B2A1 /* iOS_APOD */,
+				CFD32E912A2E141D008615BC /* Resources */,
 				CFBEECBE2A1CEF060095B2A1 /* Products */,
 				CF9675B42A29EB7B004A65AF /* Frameworks */,
 				55387BC242DD16CF5471AAA5 /* Pods */,
@@ -98,26 +125,23 @@
 		CFBEECBF2A1CEF060095B2A1 /* iOS_APOD */ = {
 			isa = PBXGroup;
 			children = (
-				CFD32E912A2E141D008615BC /* Resources */,
-				CF9675B92A2A021A004A65AF /* Extensions */,
-				CFE8803F2A21063D00E9E41C /* Models */,
-				CFBEECD52A1CEF8A0095B2A1 /* Network */,
-				CFBEECD42A1CEF6A0095B2A1 /* ViewControllers */,
+				CF5022942A2F6E790085D2AF /* Shared */,
+				CF5022932A2F6E4A0085D2AF /* Launch */,
+				CFBEECD42A1CEF6A0095B2A1 /* Scenes */,
 				CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */,
 				CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */,
 				CFBEECC62A1CEF060095B2A1 /* Main.storyboard */,
-				CFBEECCB2A1CEF080095B2A1 /* LaunchScreen.storyboard */,
 				CFBEECCE2A1CEF080095B2A1 /* Info.plist */,
 			);
 			path = iOS_APOD;
 			sourceTree = "<group>";
 		};
-		CFBEECD42A1CEF6A0095B2A1 /* ViewControllers */ = {
+		CFBEECD42A1CEF6A0095B2A1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				CFBEECC42A1CEF060095B2A1 /* ViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		CFBEECD52A1CEF8A0095B2A1 /* Network */ = {

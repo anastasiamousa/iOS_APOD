@@ -30,7 +30,6 @@ class NetworkService {
         guard let apiURL = apiURL else {
             return
         }
-
         AF.request(apiURL, method: .get, parameters: defaultParameters)
             .validate()
             .responseDecodable(of: NasaPicture.self, queue: .main) { response in
