@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5C373C84E8323F684947C7DA /* Pods_iOS_APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DCD8A4E116D49A9617580D /* Pods_iOS_APOD.framework */; };
+		CF0A5DBA2A56E1560078FE40 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A5DB92A56E1560078FE40 /* PhotoDetailsViewController.swift */; };
 		CF9675B32A29E8D1004A65AF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9675B22A29E8D1004A65AF /* NetworkService.swift */; };
 		CF9675BB2A2A0233004A65AF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9675BA2A2A0233004A65AF /* DateExtension.swift */; };
+		CFB8FAD12A56E7ED001C66ED /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD02A56E7ED001C66ED /* Font.swift */; };
+		CFB8FAD42A56E80B001C66ED /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD32A56E80B001C66ED /* Color.swift */; };
 		CFBEECC12A1CEF060095B2A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */; };
 		CFBEECC32A1CEF060095B2A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */; };
-		CFBEECC52A1CEF060095B2A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEECC42A1CEF060095B2A1 /* ViewController.swift */; };
 		CFBEECC82A1CEF060095B2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECC62A1CEF060095B2A1 /* Main.storyboard */; };
 		CFBEECCA2A1CEF080095B2A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECC92A1CEF080095B2A1 /* Assets.xcassets */; };
 		CFBEECCD2A1CEF080095B2A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECCB2A1CEF080095B2A1 /* LaunchScreen.storyboard */; };
@@ -24,13 +26,15 @@
 		1F0D978206EBFE3D080F41C0 /* Pods-iOS_APOD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_APOD.release.xcconfig"; path = "Target Support Files/Pods-iOS_APOD/Pods-iOS_APOD.release.xcconfig"; sourceTree = "<group>"; };
 		68DCD8A4E116D49A9617580D /* Pods_iOS_APOD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_APOD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A77C413F139475705AE214A /* Pods-iOS_APOD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_APOD.debug.xcconfig"; path = "Target Support Files/Pods-iOS_APOD/Pods-iOS_APOD.debug.xcconfig"; sourceTree = "<group>"; };
+		CF0A5DB92A56E1560078FE40 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		CF9675B22A29E8D1004A65AF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CF9675B52A29EB7B004A65AF /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9675BA2A2A0233004A65AF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		CFB8FAD02A56E7ED001C66ED /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		CFB8FAD32A56E80B001C66ED /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CFBEECBD2A1CEF060095B2A1 /* iOS_APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CFBEECC42A1CEF060095B2A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFBEECC72A1CEF060095B2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFBEECC92A1CEF080095B2A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFBEECCC2A1CEF080095B2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		CF5022942A2F6E790085D2AF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CFB8FACF2A56E7D6001C66ED /* Helpers */,
 				CFE8803F2A21063D00E9E41C /* Models */,
 				CF9675B92A2A021A004A65AF /* Extensions */,
 				CFBEECD52A1CEF8A0095B2A1 /* Network */,
@@ -101,6 +106,15 @@
 				CF9675BA2A2A0233004A65AF /* DateExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFB8FACF2A56E7D6001C66ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8FAD02A56E7ED001C66ED /* Font.swift */,
+				CFB8FAD32A56E80B001C66ED /* Color.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		CFBEECB42A1CEF060095B2A1 = {
@@ -139,7 +153,7 @@
 		CFBEECD42A1CEF6A0095B2A1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CFBEECC42A1CEF060095B2A1 /* ViewController.swift */,
+				CF0A5DB92A56E1560078FE40 /* PhotoDetailsViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -285,9 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB8FAD12A56E7ED001C66ED /* Font.swift in Sources */,
+				CFB8FAD42A56E80B001C66ED /* Color.swift in Sources */,
+				CF0A5DBA2A56E1560078FE40 /* PhotoDetailsViewController.swift in Sources */,
 				CF9675B32A29E8D1004A65AF /* NetworkService.swift in Sources */,
 				CF9675BB2A2A0233004A65AF /* DateExtension.swift in Sources */,
-				CFBEECC52A1CEF060095B2A1 /* ViewController.swift in Sources */,
 				CFBEECC12A1CEF060095B2A1 /* AppDelegate.swift in Sources */,
 				CFBEECC32A1CEF060095B2A1 /* SceneDelegate.swift in Sources */,
 				CFE880412A21067B00E9E41C /* NasaPicture.swift in Sources */,
