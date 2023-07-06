@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class PhotoDetailsViewController: UIViewController {
     
@@ -42,27 +43,37 @@ class PhotoDetailsViewController: UIViewController {
 
 private extension PhotoDetailsViewController {
     func fetchTodaysImage() {
-        networking.fetchTodaysImage() { result in
+        networking.fetchTodaysImage() { [weak self] result in
             switch result {
             case .success(let picture):
                 print(picture)
+                self?.handleResponse(picture: picture)
             case .failure(let error):
                 let alertController = UIAlertController(title: "error", message: error.asAFError?.errorDescription, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .default)
                 alertController.addAction(okAction)
-                self.present(alertController, animated: true)
+                self?.present(alertController, animated: true)
             }
+        }
+    }
+    
+    func handleResponse(picture: NasaPicture) {
+        titleLabel.text = picture.title
+        dateLabel.text = picture.date
+        descriptionLabel.text = picture.explanation
+        copyrightLabel.text = picture.copyright
+        
+        if let imageURL = URL(string: picture.url) {
+            photoImageView.af.setImage(withURL: imageURL)
         }
     }
 }
 
 private extension PhotoDetailsViewController {
     func setUpUI() {
-        self.titleLabel.font = Font.bold(16).font
-        self.dateLabel.font = Font.light(16).font
-        self.descriptionLabel.font = Font.regular(16).font
-        self.copyrightLabel.font = Font.light(16).font
-
-        self.titleLabel.textColor = UIColor(named: "Background.Petrol")
+        self.titleLabel.setFont(font: Font.bold(16), color: Color.Text.black)
+        self.dateLabel.setFont(font: Font.light(16), color: Color.Text.gray)
+        self.descriptionLabel.setFont(font: Font.regular(16), color: Color.Text.black)
+        self.copyrightLabel.setFont(font: Font.light(16), color: Color.Text.gray)
     }
 }

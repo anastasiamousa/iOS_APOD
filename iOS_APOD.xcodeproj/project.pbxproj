@@ -13,6 +13,7 @@
 		CF9675BB2A2A0233004A65AF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9675BA2A2A0233004A65AF /* DateExtension.swift */; };
 		CFB8FAD12A56E7ED001C66ED /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD02A56E7ED001C66ED /* Font.swift */; };
 		CFB8FAD42A56E80B001C66ED /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD32A56E80B001C66ED /* Color.swift */; };
+		CFB8FAD62A56FC47001C66ED /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD52A56FC47001C66ED /* UILabelExtension.swift */; };
 		CFBEECC12A1CEF060095B2A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */; };
 		CFBEECC32A1CEF060095B2A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */; };
 		CFBEECC82A1CEF060095B2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECC62A1CEF060095B2A1 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		CF9675BA2A2A0233004A65AF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		CFB8FAD02A56E7ED001C66ED /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		CFB8FAD32A56E80B001C66ED /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		CFB8FAD52A56FC47001C66ED /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		CFBEECBD2A1CEF060095B2A1 /* iOS_APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				CF9675BA2A2A0233004A65AF /* DateExtension.swift */,
+				CFB8FAD72A56FC4B001C66ED /* UI */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +118,14 @@
 				CFB8FAD32A56E80B001C66ED /* Color.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CFB8FAD72A56FC4B001C66ED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8FAD52A56FC47001C66ED /* UILabelExtension.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		CFBEECB42A1CEF060095B2A1 = {
@@ -306,6 +317,7 @@
 				CF9675BB2A2A0233004A65AF /* DateExtension.swift in Sources */,
 				CFBEECC12A1CEF060095B2A1 /* AppDelegate.swift in Sources */,
 				CFBEECC32A1CEF060095B2A1 /* SceneDelegate.swift in Sources */,
+				CFB8FAD62A56FC47001C66ED /* UILabelExtension.swift in Sources */,
 				CFE880412A21067B00E9E41C /* NasaPicture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
