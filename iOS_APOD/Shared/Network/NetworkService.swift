@@ -9,13 +9,13 @@ import Foundation
 import Alamofire
 
 class NetworkService {
-    
+
     //MARK: - Properties
-    
+
     typealias ApiClosurePicture = (Result<NasaPicture,Error>) -> ()
     typealias ApiClosurePictures = (Result<[NasaPicture],Error>) -> ()
 
-    private let apiKey = "pVicagi3oylyrOLjwuk5gBOJi6jb6Tfn9AljM6oP"
+    private let apiKey = "bdNyomm2VIYo8WAzM1HaoxI7Aqv6mgsimr2IN7xQ"
     private var apiURL: URL? {
         URL(string: "https://api.nasa.gov/planetary/apod")
     }
@@ -23,9 +23,9 @@ class NetworkService {
     private var defaultParameters: [String: Any] {
         ["api_key": apiKey]
     }
-    
+
     //MARK: - Methods
-    
+
     func fetchTodaysImage(completion: ApiClosurePicture?) {
         guard let apiURL = apiURL else {
             return
@@ -66,3 +66,4 @@ class NetworkService {
     }
 
 }
+

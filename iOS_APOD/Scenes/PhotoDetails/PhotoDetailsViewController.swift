@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Alamofire
 import AlamofireImage
 
-class PhotoDetailsViewController: UIViewController {
+class PhotoDetailsViewController: BaseViewController {
     
     //MARK: - IBOutlets
     
@@ -43,16 +44,15 @@ class PhotoDetailsViewController: UIViewController {
 
 private extension PhotoDetailsViewController {
     func fetchTodaysImage() {
+        showLoading(true)
         networking.fetchTodaysImage() { [weak self] result in
+            self?.showLoading(false)
             switch result {
             case .success(let picture):
                 print(picture)
                 self?.handleResponse(picture: picture)
             case .failure(let error):
-                let alertController = UIAlertController(title: "error", message: error.asAFError?.errorDescription, preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default)
-                alertController.addAction(okAction)
-                self?.present(alertController, animated: true)
+                self?.presentError(error)
             }
         }
     }

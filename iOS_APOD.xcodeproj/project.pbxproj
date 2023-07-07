@@ -14,6 +14,7 @@
 		CFB8FAD12A56E7ED001C66ED /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD02A56E7ED001C66ED /* Font.swift */; };
 		CFB8FAD42A56E80B001C66ED /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD32A56E80B001C66ED /* Color.swift */; };
 		CFB8FAD62A56FC47001C66ED /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD52A56FC47001C66ED /* UILabelExtension.swift */; };
+		CFB8FADB2A580622001C66ED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FADA2A580622001C66ED /* BaseViewController.swift */; };
 		CFBEECC12A1CEF060095B2A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */; };
 		CFBEECC32A1CEF060095B2A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */; };
 		CFBEECC82A1CEF060095B2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECC62A1CEF060095B2A1 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		CFB8FAD02A56E7ED001C66ED /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		CFB8FAD32A56E80B001C66ED /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CFB8FAD52A56FC47001C66ED /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		CFB8FADA2A580622001C66ED /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CFBEECBD2A1CEF060095B2A1 /* iOS_APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,22 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		CFB8FAD82A5805DA001C66ED /* PhotoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CF0A5DB92A56E1560078FE40 /* PhotoDetailsViewController.swift */,
+			);
+			path = PhotoDetails;
+			sourceTree = "<group>";
+		};
+		CFB8FAD92A5805F3001C66ED /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8FADA2A580622001C66ED /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		CFBEECB42A1CEF060095B2A1 = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +182,8 @@
 		CFBEECD42A1CEF6A0095B2A1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CF0A5DB92A56E1560078FE40 /* PhotoDetailsViewController.swift */,
+				CFB8FAD92A5805F3001C66ED /* Base */,
+				CFB8FAD82A5805DA001C66ED /* PhotoDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -315,6 +334,7 @@
 				CF0A5DBA2A56E1560078FE40 /* PhotoDetailsViewController.swift in Sources */,
 				CF9675B32A29E8D1004A65AF /* NetworkService.swift in Sources */,
 				CF9675BB2A2A0233004A65AF /* DateExtension.swift in Sources */,
+				CFB8FADB2A580622001C66ED /* BaseViewController.swift in Sources */,
 				CFBEECC12A1CEF060095B2A1 /* AppDelegate.swift in Sources */,
 				CFBEECC32A1CEF060095B2A1 /* SceneDelegate.swift in Sources */,
 				CFB8FAD62A56FC47001C66ED /* UILabelExtension.swift in Sources */,
