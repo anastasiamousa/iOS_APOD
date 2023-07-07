@@ -15,6 +15,9 @@
 		CFB8FAD42A56E80B001C66ED /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD32A56E80B001C66ED /* Color.swift */; };
 		CFB8FAD62A56FC47001C66ED /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAD52A56FC47001C66ED /* UILabelExtension.swift */; };
 		CFB8FADB2A580622001C66ED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FADA2A580622001C66ED /* BaseViewController.swift */; };
+		CFB8FADD2A581032001C66ED /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FADC2A581032001C66ED /* DatePickerViewController.swift */; };
+		CFB8FAE02A5818F3001C66ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFB8FADF2A5818F3001C66ED /* Localizable.strings */; };
+		CFB8FAE22A581D03001C66ED /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8FAE12A581D03001C66ED /* UIViewExtension.swift */; };
 		CFBEECC12A1CEF060095B2A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */; };
 		CFBEECC32A1CEF060095B2A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */; };
 		CFBEECC82A1CEF060095B2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBEECC62A1CEF060095B2A1 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 		CFB8FAD32A56E80B001C66ED /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CFB8FAD52A56FC47001C66ED /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		CFB8FADA2A580622001C66ED /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CFB8FADC2A581032001C66ED /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		CFB8FADF2A5818F3001C66ED /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CFB8FAE12A581D03001C66ED /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CFBEECBD2A1CEF060095B2A1 /* iOS_APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				CFB8FAD52A56FC47001C66ED /* UILabelExtension.swift */,
+				CFB8FAE12A581D03001C66ED /* UIViewExtension.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -144,6 +151,14 @@
 				CFB8FADA2A580622001C66ED /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		CFB8FADE2A581044001C66ED /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8FADC2A581032001C66ED /* DatePickerViewController.swift */,
+			);
+			path = DatePicker;
 			sourceTree = "<group>";
 		};
 		CFBEECB42A1CEF060095B2A1 = {
@@ -173,7 +188,6 @@
 				CFBEECD42A1CEF6A0095B2A1 /* Scenes */,
 				CFBEECC02A1CEF060095B2A1 /* AppDelegate.swift */,
 				CFBEECC22A1CEF060095B2A1 /* SceneDelegate.swift */,
-				CFBEECC62A1CEF060095B2A1 /* Main.storyboard */,
 				CFBEECCE2A1CEF080095B2A1 /* Info.plist */,
 			);
 			path = iOS_APOD;
@@ -182,8 +196,10 @@
 		CFBEECD42A1CEF6A0095B2A1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CFBEECC62A1CEF060095B2A1 /* Main.storyboard */,
 				CFB8FAD92A5805F3001C66ED /* Base */,
 				CFB8FAD82A5805DA001C66ED /* PhotoDetails */,
+				CFB8FADE2A581044001C66ED /* DatePicker */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -201,6 +217,7 @@
 			children = (
 				CFBEECC92A1CEF080095B2A1 /* Assets.xcassets */,
 				CFD32E922A2E144E008615BC /* ColorAssets.xcassets */,
+				CFB8FADF2A5818F3001C66ED /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -273,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB8FAE02A5818F3001C66ED /* Localizable.strings in Resources */,
 				CFBEECCD2A1CEF080095B2A1 /* LaunchScreen.storyboard in Resources */,
 				CFBEECCA2A1CEF080095B2A1 /* Assets.xcassets in Resources */,
 				CFD32E932A2E144E008615BC /* ColorAssets.xcassets in Resources */,
@@ -333,7 +351,9 @@
 				CFB8FAD42A56E80B001C66ED /* Color.swift in Sources */,
 				CF0A5DBA2A56E1560078FE40 /* PhotoDetailsViewController.swift in Sources */,
 				CF9675B32A29E8D1004A65AF /* NetworkService.swift in Sources */,
+				CFB8FADD2A581032001C66ED /* DatePickerViewController.swift in Sources */,
 				CF9675BB2A2A0233004A65AF /* DateExtension.swift in Sources */,
+				CFB8FAE22A581D03001C66ED /* UIViewExtension.swift in Sources */,
 				CFB8FADB2A580622001C66ED /* BaseViewController.swift in Sources */,
 				CFBEECC12A1CEF060095B2A1 /* AppDelegate.swift in Sources */,
 				CFBEECC32A1CEF060095B2A1 /* SceneDelegate.swift in Sources */,
