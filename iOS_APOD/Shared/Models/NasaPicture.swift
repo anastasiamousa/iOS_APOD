@@ -15,5 +15,5 @@ struct NasaPicture: Decodable {
     let media_type: String
     let service_version: String
     let url: String
-    let hdURL: String
+    let hdurl: String
 }

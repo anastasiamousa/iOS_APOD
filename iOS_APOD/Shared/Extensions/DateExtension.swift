@@ -11,8 +11,13 @@ extension Date {
     
     var toYYYYMMDD: String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-mm-dd"
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: self)
     }
     
+    var toDMonthYYYY: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM yyyy"
+        return formatter.string(from: self)
+    }
 }

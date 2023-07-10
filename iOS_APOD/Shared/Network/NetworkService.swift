@@ -47,13 +47,13 @@ class NetworkService {
 
         var parameters = defaultParameters
         if let fromDate = from {
-            parameters["end_date"] = fromDate.toYYYYMMDD
+            parameters["start_date"] = fromDate.toYYYYMMDD
         }
         if let toDate = to {
-            parameters["start_date"] = toDate.toYYYYMMDD
+            parameters["end_date"] = toDate.toYYYYMMDD
         }
 
-        AF.request(apiURL, method: .get, parameters: nil)
+        AF.request(apiURL, method: .get, parameters: parameters)
             .validate()
             .responseDecodable(of: [NasaPicture].self, queue: .main) { response in
             switch response.result {

@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  iOS_APOD
+
+  Created by Anastasia Mousa on 7/7/23.
+  
+*/
+
+//MARK: - General
+
+"Cancel" = "cancel";
+"Done"   = "Done";
+
+//MARK: - DatePickerViewController
+
+"DatePickerViewController_title" = "Please select a date or a date range";
+
+"DatePickerViewController_first_textField_title"  = "Start date";
+"DatePickerViewController_second_textField_title" = "End date";
+
+"DatePickerViewController_button_title" = "Show images";
+
+"DatePickerViewController_first_textField_placeholder"  = "Start date";
+"DatePickerViewController_second_textField_placeholder" = "End date";
+
