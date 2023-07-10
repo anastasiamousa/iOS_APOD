@@ -60,6 +60,10 @@ private extension DatePickerViewController {
     }
     
     func setUpUI() {
+        // navigation
+        self.title = NSLocalizedString("search_tab_title", comment: "")
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         // font
         titleLabel.setFont(font: .bold(16), color: .black)
         firstTextFieldLabel.setFont(font: .regular(14), color: .gray)
@@ -111,8 +115,9 @@ private extension DatePickerViewController {
             self?.showLoading(false)
             switch result {
             case .success(let images):
-                //TODO: Navigate to inner screen
-                break
+                let controller = PhotosTableViewController(images: images)
+                self?.navigationController?.pushViewController(controller, animated: true)
+                
             case .failure(let error):
                 self?.presentError(error)
             }
