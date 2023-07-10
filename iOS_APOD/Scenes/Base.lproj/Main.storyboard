@@ -179,6 +179,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="submitButtonTapped:" destination="Shy-i0-GWt" eventType="touchUpInside" id="MgH-sO-F7S"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -208,6 +211,7 @@
                     <connections>
                         <outlet property="firstTextField" destination="gId-4p-UmX" id="g7R-Ld-MJs"/>
                         <outlet property="firstTextFieldLabel" destination="DYa-Fm-MYJ" id="Tci-4k-j3S"/>
+                        <outlet property="scrollView" destination="h8A-cy-AK2" id="eF6-fi-m6b"/>
                         <outlet property="secondTextField" destination="VYL-Bm-7PT" id="jQ8-mX-nlv"/>
                         <outlet property="secondTextFieldLabel" destination="U8V-HK-o0I" id="kvQ-nt-eou"/>
                         <outlet property="submitButton" destination="2h7-dH-vKd" id="QlU-Eh-Hfu"/>

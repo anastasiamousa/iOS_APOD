@@ -18,4 +18,9 @@ extension UIView {
         layer.cornerRadius  = radius
         layer.masksToBounds = true
     }
+    
+    func setEnabled(_ enable: Bool) {
+        isUserInteractionEnabled = enable
+        alpha = enable ? 1.0 : 0.5
+    }
 }

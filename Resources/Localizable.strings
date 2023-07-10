@@ -9,7 +9,7 @@
 //MARK: - General
 
 "Cancel" = "cancel";
-"Done" = "done";
+"Done"   = "Done";
 
 //MARK: - DatePickerViewController
 

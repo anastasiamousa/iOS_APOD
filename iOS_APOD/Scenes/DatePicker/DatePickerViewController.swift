@@ -7,9 +7,11 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController {
+class DatePickerViewController: BaseViewController {
 
     //MARK: - IBOutlets
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -24,10 +26,17 @@ class DatePickerViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     
     //MARK: - IBActions
-
+    
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        self.fetchImages()
+    }
+    
     //MARK: - Properties
     
     private let datePicker = UIDatePicker()
+    private var startDate: Date?
+    private var endDate: Date?
+    private let network = NetworkService()
     
     //MARK: - Life cycle
     
@@ -35,6 +44,7 @@ class DatePickerViewController: UIViewController {
         super.viewDidLoad()
 
         self.setUpUI()
+        self.enableTargetsIfNeeded()
     }
     
     //MARK: - Methods
@@ -45,7 +55,8 @@ class DatePickerViewController: UIViewController {
 private extension DatePickerViewController {
     
     func registerNotifications() {
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func setUpUI() {
@@ -87,11 +98,55 @@ private extension DatePickerViewController {
         secondTextField.inputAccessoryView = toolBar
     }
     
+    func enableTargetsIfNeeded() {
+        submitButton.setEnabled(firstTextField.text?.isEmpty == false && secondTextField.text?.isEmpty == false)
+        secondTextField.setEnabled(firstTextField.text?.isEmpty == false)
+        secondTextFieldLabel.setEnabled(firstTextField.text?.isEmpty == false)
+    }
+    
+    func fetchImages() {
+        guard let startDate = startDate, let endDate = endDate else { return }
+        showLoading(true)
+        network.fetchImages(from: startDate, to: endDate) { [weak self] result in
+            self?.showLoading(false)
+            switch result {
+            case .success(let images):
+                //TODO: Navigate to inner screen
+                break
+            case .failure(let error):
+                self?.presentError(error)
+            }
+        }
+    }
+    
+    // objcs
     @objc func cancelPressed() {
         self.view.endEditing(true)
     }
     
     @objc func donePressed() {
-        self.view.endEditing(true)
+        let date = datePicker.date
+        if firstTextField.isEditing {
+            startDate = date
+            firstTextField.text = date.toDMonthYYYY
+            datePicker.minimumDate = date
+            enableTargetsIfNeeded()
+            secondTextField.becomeFirstResponder()
+        } else {
+            endDate = date
+            secondTextField.text = date.toDMonthYYYY
+            self.view.endEditing(true)
+            enableTargetsIfNeeded()
+        }
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        let info = notification.userInfo
+        let keyboardSize = (info?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize?.height ?? 0, right: 0)
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        scrollView.contentInset = .zero
     }
 }
