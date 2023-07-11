@@ -2,7 +2,7 @@
 //  PhotoDetailsViewController.swift
 //  iOS_APOD
 //
-//  Created by Anastasia Mousa on 6/7/23.
+//  Created by Anastasia Mousa on 11/7/23.
 //
 
 import UIKit
@@ -23,49 +23,32 @@ class PhotoDetailsViewController: BaseViewController {
     
     @IBOutlet weak var copyrightLabel: UILabel!
     
-    //MARK: - IBActions
-    
     //MARK: - Properties
     
-    let networking = NetworkService()
+    private var presenter: PhotoDetailsPresentable
+    
+    static var nibName: String {
+        String(describing: self)
+    }
+    
+    //MARK: - Init
+    
+    init(presenter: PhotoDetailsPresentable) {
+        self.presenter = presenter
+        super.init(nibName: Self.nibName, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.fetchTodaysImage()
+        presenter.viewDidLoad(view: self)
         self.setUpUI()
-    }
-    
-    //MARK: - Methods
-    
-}
-
-private extension PhotoDetailsViewController {
-    func fetchTodaysImage() {
-        showLoading(true)
-        networking.fetchTodaysImage() { [weak self] result in
-            self?.showLoading(false)
-            switch result {
-            case .success(let picture):
-                print(picture)
-                self?.handleResponse(picture: picture)
-            case .failure(let error):
-                self?.presentError(error)
-            }
-        }
-    }
-    
-    func handleResponse(picture: NasaPicture) {
-        titleLabel.text = picture.title
-        dateLabel.text = picture.date
-        descriptionLabel.text = picture.explanation
-        copyrightLabel.text = picture.copyright
-        
-        if let imageURL = URL(string: picture.url) {
-            photoImageView.af.setImage(withURL: imageURL)
-        }
     }
 }
 
@@ -76,4 +59,27 @@ private extension PhotoDetailsViewController {
         self.descriptionLabel.setFont(font: Font.regular(16), color: Color.Text.black)
         self.copyrightLabel.setFont(font: Font.light(16), color: Color.Text.gray)
     }
+}
+
+extension PhotoDetailsViewController: PhotoDetailsView {
+    
+    func showError(_ error: Error) {
+        self.presentError(error)
+    }
+    
+    func showLoadingState(_ loading: Bool) {
+        self.showLoading(loading)
+    }
+    
+    func showImage(_ image: NasaPicture) {
+        titleLabel.text = image.title
+        dateLabel.text = image.date
+        descriptionLabel.text = image.explanation
+        copyrightLabel.text = image.copyright
+        
+        if let imageURL = URL(string: image.url) {
+            photoImageView.af.setImage(withURL: imageURL)
+        }
+    }
+    
 }

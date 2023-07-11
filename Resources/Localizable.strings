@@ -23,3 +23,7 @@
 "DatePickerViewController_first_textField_placeholder"  = "Start date";
 "DatePickerViewController_second_textField_placeholder" = "End date";
 
+//MARK: Navigation titles
+
+"search_tab_title"      = "Find the photo";
+"photos_table_vc_title" = "Selected photos";
