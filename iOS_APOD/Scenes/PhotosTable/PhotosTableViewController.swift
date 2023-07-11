@@ -17,7 +17,7 @@ class PhotosTableViewController: UIViewController {
     
     //MARK: - Properties
 
-    let images: [NasaPicture]
+    let presenter: PhotosTablePresentable
     
     static var nibName: String {
         String(describing: self)
@@ -27,8 +27,18 @@ class PhotosTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        title = presenter.navigationTitle
         setUpTableView()
+        presenter.viewDidLoad(view: self)
+    }
+    
+    init(presenter: PhotosTablePresentable) {
+        self.presenter = presenter
+        super.init(nibName: Self.nibName, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Methods
@@ -44,4 +54,13 @@ private extension PhotosTableViewController {
         tableView.estimatedRowHeight = 64
     }
 
+}
+
+extension PhotosTableViewController: PhotosTableView {
+    
+    func showImage(_ image: NasaPicture) {
+        //TODO: - Fix navigation
+        print(image)
+    }
+    
 }

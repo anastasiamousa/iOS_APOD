@@ -9,7 +9,12 @@ import Foundation
 
 class PhotoTablePresenter {
     
+    //MARK: - Properties
+    
     private let images: [NasaPicture]
+    private var view: PhotosTableView?
+    
+    //MARK: - Init
     
     init(images: [NasaPicture]) {
         self.images = images
@@ -26,19 +31,20 @@ extension PhotoTablePresenter: PhotosTablePresentable {
         return 1
     }
     
-    func viewDidLoad() {
-        
+    func viewDidLoad(view: PhotosTableView) {
+        self.view = view
     }
     
-    func numberOfRows(for indexPath: IndexPath) -> Int {
+    func numberOfRows(for section: Int) -> Int {
         return images.count
     }
     
-    func getImage(for indexPath: IndexPath) -> NasaPicture? {
+    func getImage(for indexPath: IndexPath) -> NasaPicture {
         return images[indexPath.row]
     }
     
     func didSelect(at indexPath: IndexPath) {
-        print(indexPath)
+        view?.showImage(images[indexPath.row])
     }
+    
 }

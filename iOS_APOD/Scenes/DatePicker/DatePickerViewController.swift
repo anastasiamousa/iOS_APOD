@@ -114,10 +114,12 @@ private extension DatePickerViewController {
         network.fetchImages(from: startDate, to: endDate) { [weak self] result in
             self?.showLoading(false)
             switch result {
-            case .success(let images):
-                let controller = PhotosTableViewController(images: images)
-                self?.navigationController?.pushViewController(controller, animated: true)
                 
+            case .success(let images):
+                let presenter = PhotoTablePresenter(images: images)
+                let controller = PhotosTableViewController(presenter: presenter)
+                self?.navigationController?.pushViewController(controller, animated: true)
+    
             case .failure(let error):
                 self?.presentError(error)
             }

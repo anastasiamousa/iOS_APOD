@@ -9,23 +9,23 @@ import UIKit
 
 extension PhotosTableViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        presenter.numberOfSections
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return images.count
+        presenter.numberOfRows(for: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PhotoTableViewCell = tableView.dequeueReusableCell(withIdentifier: PhotoTableViewCell.nibName, for: indexPath) as! PhotoTableViewCell
-        let image = images[indexPath.row]
+        let image = presenter.getImage(for: indexPath)
         cell.configure(with: image)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print(indexPath.row)
+        presenter.didSelect(at: indexPath)
     }
     
 }
