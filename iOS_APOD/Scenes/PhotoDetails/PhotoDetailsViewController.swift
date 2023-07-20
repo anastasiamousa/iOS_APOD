@@ -54,6 +54,8 @@ class PhotoDetailsViewController: BaseViewController {
 
 private extension PhotoDetailsViewController {
     func setUpUI() {
+        title = presenter.navigationTitle
+        
         self.titleLabel.setFont(font: Font.bold(16), color: Color.Text.black)
         self.dateLabel.setFont(font: Font.light(16), color: Color.Text.gray)
         self.descriptionLabel.setFont(font: Font.regular(16), color: Color.Text.black)

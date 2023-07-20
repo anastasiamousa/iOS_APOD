@@ -14,7 +14,7 @@
         <scene sceneID="qFV-hc-kCm">
             <objects>
                 <navigationController id="gne-tf-GjB" customClass="PhotoDetailsNavigationController" customModule="iOS_APOD" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="WMP-Hk-MYW"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="house" catalog="system" id="WMP-Hk-MYW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Qv-6T-sFb">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -105,7 +105,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsf-Of-5bh">
-                                        <rect key="frame" x="16" y="597.66666666666663" width="361" height="56.333333333333371"/>
+                                        <rect key="frame" x="16" y="593.66666666666663" width="361" height="56.333333333333371"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tsf-Of-5bh" secondAttribute="height" multiplier="6.4" id="KwD-nn-zUU"/>
                                         </constraints>
@@ -169,6 +169,7 @@
     </scenes>
     <resources>
         <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <namedColor name="Background.Gray">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

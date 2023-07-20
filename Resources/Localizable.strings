@@ -25,5 +25,7 @@
 
 //MARK: Navigation titles
 
-"search_tab_title"      = "Find the photo";
-"photos_table_vc_title" = "Selected photos";
+"home_tab_title"                 = "Photo of the Day";
+"photo_details_navigation_title" = "Photo of %@";
+"search_tab_title"               = "Find the photo";
+"photos_table_vc_title"          = "Selected photos";

@@ -27,7 +27,7 @@ class PhotosTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = presenter.navigationTitle
+        navigationController?.navigationItem.title = presenter.navigationTitle
         setUpTableView()
         presenter.viewDidLoad(view: self)
     }
@@ -59,8 +59,9 @@ private extension PhotosTableViewController {
 extension PhotosTableViewController: PhotosTableView {
     
     func showImage(_ image: NasaPicture) {
-        //TODO: - Fix navigation
-        print(image)
+        let presenter = PhotoDetailsPresenter(with: image)
+        let controller = PhotosTableViewController(presenter: presenter as! PhotosTablePresentable)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }

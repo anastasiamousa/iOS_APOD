@@ -40,6 +40,10 @@ private extension PhotoDetailsPresenter {
 
 extension PhotoDetailsPresenter: PhotoDetailsPresentable {
     
+    var navigationTitle: String {
+        image == nil ? NSLocalizedString("home_tab_title", comment: "") : String(format: NSLocalizedString("photo_details_navigation_title", comment: ""), image?.date ?? "")
+    }
+    
     func viewDidLoad(view: PhotoDetailsView) {
         self.view = view
         if let image = image {
